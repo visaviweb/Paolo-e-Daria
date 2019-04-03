@@ -1,0 +1,129 @@
+.gioventu-text {
+  background-color: #932442;
+  color: $color-text-storia;
+}
+
+.gioventu-image {
+	background: #3494e6;
+	background: url(../img/gioventu/sfondo.gif) repeat-y top center scroll;
+  background-size: 100% auto;
+}
+
+.antenati {
+	position:absolute;
+	top:0;
+	left:0;
+  width: 100%;
+}
+  .lei, .lui {
+   z-index: 50;
+  width: 18%;
+ }
+
+ @if $transform {
+  .lui {
+   @include mytransform(10vw, 25vw, 75px); // transform: translateZ(0.25px) scale(0.75) translateX(12vw) translateY(25vw);
+ } 
+ .lei {
+   @include mytransform(-10vw, 0, 75px); // transform: translateZ(0.1px) scale(0.9) translateX(0vw) translateY(0vw);
+ } 
+}
+
+
+
+.lei-bambola {
+  top: 25vw;
+  right: 2%;
+  width:25%;
+}
+
+
+.lei-ritratto1 {
+	top: 112vw;
+	right: 5%;
+}
+
+.lei-ritratto2 {
+	top: 83vw;
+	right: 9%;
+}
+
+.lei-ritratto3 {
+	top: 50vw;
+	right: 2%;
+}
+
+.lui-ritratto1 {
+	top: -4vw;
+	left: 2%;
+}
+
+.lui-ritratto2 {
+  top: 87vw;
+  left: 8vw;
+}
+
+.lui-ritratto3 {
+  top: 115vw;
+  left: 4%;
+}
+
+.lui-ritratto4 {
+  top: 35vw;
+  left: -3%;
+  width: 22%;
+}
+
+.soldato {
+	z-index: 50;
+	width: 15%;
+  @if $transform {
+   @include mytransform(19vw, 15vw, 155px); // transform: translateZ(0.25px) scale(0.75) translateX(12vw) translateY(25vw);
+  }
+}
+
+
+
+.soldato1 {
+  top: 68vw;
+  left: 0;
+}
+
+.soldato2 {
+  top: 66vw;
+  left: 12%;
+}
+
+.soldato3 {
+  top: 140vw;
+  left: 3%;
+}
+
+.ft-gioventu {
+	top: 40vw;
+ padding-bottom: 40vw;
+ .inner {
+  padding-bottom: 22vw;
+  width: 70%;
+  @media(min-width: 600px) {
+    width: 60%;
+  }
+  @media(min-width: 800px) {
+    width: 50%;
+  }
+  @media(min-width: 1000px) {
+    width: 40%;
+  }
+  p:first-child:first-letter {color: #01aa34;}
+}
+}
+.lui-e-lei {
+  width: 30%;
+  left: 35%;
+  margin-top: -25vw;
+  position: relative;
+    @if $transform {
+      @include mytransform(0, 0, 30px); // transform: translateZ(0.1px) scale(0.9) translateX(0vw);
+    }
+}
+

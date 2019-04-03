@@ -1,0 +1,32 @@
+// from sitomatic source scss...
+// http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+// http://snook.ca/archives/html_and_css/font-size-with-rem
+
+// number in pixel without unit
+$body_font_size: 16 !default;
+
+$operator_font_size: $body_font_size / 16;
+
+// set the main font size from the pixel value (without unit). to be applied to the html or body tag
+@mixin body_font_size_from_pixel($size_value: 16) {
+  @if $size_value {
+    font-size: $size_value + px;
+    font-size: ($size_value / 16)  + rem;
+  }
+}
+
+// set the font-size from the percent value
+@mixin font_size_from_percent($size_value: 100){
+  @if $size_value {
+    font-size: round($size_value * $body_font_size / 100) + px;
+    font-size: ($size_value /100) + rem;
+  }
+}
+
+// set the font-size from the pixel value 
+@mixin font_size_from_pixel($size_value: 16){
+  @if $size_value {
+  	font-size: $size_value + px;
+    font-size: ($size_value / $operator_font_size)  + rem;
+  }
+}

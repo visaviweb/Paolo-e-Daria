@@ -1,0 +1,19 @@
+@media print {
+	body, html {
+		overflow: visible !important;
+	}
+
+	body {
+	  font-size: 10pt;
+	  line-height: 1.3;
+	}
+
+   .section {
+   	background-color: #fff;
+   	color: #000;
+   }
+
+   .image {
+   	display: none;
+   }
+}

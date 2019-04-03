@@ -1,0 +1,69 @@
+$font_family_sans_serif: Helvetica, Arial, sans-serif;
+$font_family_serif: Georgia, Times, serif;
+
+// number in pixel without unit for the main font-size
+$body_font_size: 16;
+$body_line_height: 1.4;
+$font_family: $font_family_serif;
+$font_color: #000;
+
+// global text vertical margin bottom
+$text_bottom_margin: 0.8em;
+$text_top_margin: 0;
+
+// color for header H1, H2, ...
+$header_color: false;
+
+// font family for header H1, H2, ...
+$header_font_family: Georgia, Times, serif;
+$header_font_weight: normal;
+
+
+// use custom margin values
+$h1_margin: 0 0 0.6em ;
+$h2_margin: 0 0 0.6em ;
+$h3_margin: 0 0 0.2em ;
+$h4_margin: 0 0 0.2em ;
+$h5_margin: 0 0 0.2em ;
+$h6_margin: 0 0 0.2em ;
+
+// line-height
+$header_line_height: 1.15 ;
+
+// or apply standard margin with
+// margin-top:0;
+// and standard bottom margin
+// set small bottom margin?:
+$use_small_margin_for_header: false ;
+
+// set the header font size. in percents of the main font size without unit (ex. 200)
+// set to false to not set
+$h1_font_size: 360 ;
+$h2_font_size: 200 ;
+$h3_font_size: 140 ;
+$h4_font_size: 130 ;
+$h5_font_size: 120 ;
+$h6_font_size: 100 ;
+
+// use rem or percent for sizing header?
+$use_rem_for_heading: false ;
+
+@import 'tipo_base';
+
+h1 {
+	font-family: 'Parisienne', Georgia, Times, serif;
+}
+
+body {
+	text-align: left;
+	@media(min-width: 400px) {
+      font-size: 18px;
+    }
+    @media(min-width: 600px) {
+      text-align: justify;
+      font-size: 20px;
+    }
+    @media(min-width: 800px) {
+      font-size: 22px;
+    }
+}

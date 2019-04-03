@@ -1,0 +1,163 @@
+
+$transform: true;
+$debug: false;
+$perspective: 300;
+$color-text-storia: #EFEADA;
+
+@import 'normalize-scss/sass/normalize/import-now';
+
+  /*! Paolo e Daria scss */
+
+@import 'tipo';
+
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body { 
+  margin:0;
+  padding:0;
+  perspective: $perspective + 0px;
+  transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+@function scalez($z) {
+  $new: $z / ($z * 0 + 1);
+  @return 1 + ($new * -1) / $perspective;
+}
+
+@mixin mytransform ($x, $y, $z) {
+  transform: translateX($x)  translateY($y) translateZ($z) scale(scalez($z));
+}
+
+
+.section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  transform-style: inherit;
+}
+
+
+.section-text {
+  z-index: 1000;
+	display: table;
+    width: 100%; 
+    height: auto;
+    padding: 0;
+    @media(min-width: 768px) {
+        min-height: 100vh;
+        padding: 0;
+    }
+
+    .inner {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 40px;
+        font-style: italic;
+        @media(min-width: 500px) {
+            padding: 50px;
+        } 
+        @media(min-width: 600px) {
+            padding: 60px;
+        } 
+        @media(min-width: 768px) {
+            padding: 80px;
+        }    
+    }
+
+    .content-text {
+      max-width: 750px;
+      margin: 0 auto;
+    }
+}
+
+.frame-text {
+  position:relative;
+  width:100%;
+  .inner {
+    margin: 0 auto;
+    width: 60%;
+    padding: 15px;
+    background: #fff;
+    @media(min-width: 300px) {
+       padding: 15px;
+    }
+    @media(min-width: 400px) {
+      padding: 20px;
+    }
+    @media(min-width: 500px) {
+      padding: 25px;
+    }
+    @media(min-width: 700px) {
+      padding: 30px;
+    }
+    @media(min-width: 800px) {
+      padding: 25px;
+    }
+    @media(min-width: 900px) {
+      padding: 35px;
+    }
+    @media(min-width: 1200px) {
+      padding: 45px;
+    }
+  }
+  p:first-child:first-letter {
+    font-size: 490%; 
+    float: left; 
+    margin: 0.27em 0.15em 0.20em 0; 
+    line-height: 0.3;
+  }
+}
+
+.image {
+  position:absolute;
+  height: auto;
+}
+
+@import 'section-01-nascita';
+@import 'section-02-gioventu';
+@import 'section-03-amore';
+@import 'section-04-viaggio';
+
+.final-text {
+    background-color: #618BAB;
+    text-align: center;
+    color: #fff;
+
+    
+}
+
+.intro {
+    background: #535957 url(../img/copertina.gif) no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+.footer {
+  background: #222;
+  color: #888;
+  a:link, a:visited {
+    color: #888;
+  }
+  a:hover {
+    color: #fff;
+  }
+
+}
+
+.intro, .final-text, .footer {
+   .inner {
+       text-align: center;
+    }
+}
+
+
+@import 'debug';
+@import 'print';

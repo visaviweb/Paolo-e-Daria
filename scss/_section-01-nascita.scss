@@ -1,0 +1,164 @@
+
+
+.nascita-text {
+    background-color: #3B84D0;
+    color: $color-text-storia;
+}
+
+.nascita-image {
+  background: #82befb;
+  z-index: -1;
+  &:before {
+    content: '';
+    display: block;
+    position:absolute;
+    width: 100%;
+    height: 100vw;
+    background: url(../img/nascita-paolo/sfondo-boxer.gif) no-repeat top center scroll;
+    background-size: cover;
+    @if $transform {
+      @include mytransform(0, -8vw, -90px); // transform: translateZ(-90px) scale(scalez(-90)) translateY(25vw);
+    }
+  }
+}
+
+.sfondo-terra {
+  top: 55vw;
+  left:0;
+  width:100%;
+  height: auto;
+
+  @if $transform {
+      // @include mytransform(0, 25vw, -90px); // transform: translateZ(-90px) scale(scalez(-90)) translateY(25vw);
+  }
+}
+
+.fiocco {
+  top: 10vw;
+  right:5vw;
+  width: 15%;
+
+  @if $transform {
+    // @include mytransform(3vw, -8vw, -60px); // transform: translateZ(-60px) scale(scalez(-60)) translateX(3vw) translateY(-8vw);
+  }
+}
+
+.bandiere {
+    display: block;
+    top: 50vw;
+    right: 3%;
+    width: 25%;
+
+    @if $transform {
+       // @include mytransform(5vw, -9vw, -75px); //transform: translateZ(-75px) scale(scalez(-75)) translateX(5vw) translateY(-9vw);
+    }
+
+}
+
+.bandiere2 {
+  top: 70vw;
+    @if $transform {
+      // @include mytransform(6vw, -5vw, -75px); // transform: translateZ(-75px) scale(scalez(-75)) translateX(6vw) translateY(-5vw);
+    }
+}
+
+.boxer {
+  top: 8vw;
+  left:25%;
+  width:50%;
+
+  @if $transform {
+    // @include mytransform(0, 0, -30px); // translateZ(-30px) scale(scalez(-30)); // translateY(20vw);
+  }
+}
+
+.ft-nascita {
+  position:relative;
+  top: 40vw;
+  
+  .inner {
+    width: 80%;
+    padding-bottom: 22vw;
+    p:first-child:first-letter {color: #e3007b;}
+    
+    @media(min-width: 500px) {
+      width: 70%;
+    }
+
+    @media(min-width: 700px) {
+      width: 65%;
+    }
+
+    @media(min-width: 900px) {
+      width: 60%;
+    }
+
+    @media(min-width: 1100px) {
+      width: 50%;
+    }
+  }
+}
+
+
+$bimbo-top: 5vw;
+$bimbo-scatto: 15vw;
+
+$bimpbo-initial-ty: 92vw;
+$bimbo-scatto-ty: 10vw;
+$bimbo-trans-z: 150px;
+$bimbo-trans-x: 42vw;
+$bimbo-scale: scalez(150); // 0.30
+
+
+.bimbo {
+  top: $bimbo-top;
+  left:1%;
+  width:18%;
+  z-index: 150;
+}
+
+@if $transform {
+  .bimbo1 {
+    transform: translateZ($bimbo-trans-z) scale($bimbo-scale) translateY($bimpbo-initial-ty) translateX($bimbo-trans-x);
+  }
+  .bimbo2 {
+    transform: translateZ($bimbo-trans-z) scale($bimbo-scale) translateY($bimpbo-initial-ty - $bimbo-scatto-ty) translateX($bimbo-trans-x);
+  }
+  .bimbo3 {
+    transform: translateZ($bimbo-trans-z) scale($bimbo-scale) translateY($bimpbo-initial-ty - 2*$bimbo-scatto-ty) translateX($bimbo-trans-x);
+  }
+  .bimbo4 {
+    transform: translateZ($bimbo-trans-z) scale($bimbo-scale) translateY($bimpbo-initial-ty - 3*$bimbo-scatto-ty) translateX($bimbo-trans-x);
+  }
+  .bimbo5 {
+    transform: translateZ($bimbo-trans-z) scale($bimbo-scale) translateY($bimpbo-initial-ty - 4*$bimbo-scatto-ty) translateX($bimbo-trans-x);
+  }
+}
+
+.bimbo2 {
+  top: $bimbo-top + $bimbo-scatto;
+}
+
+.bimbo3 {
+  top: $bimbo-top + 2*$bimbo-scatto;
+}
+
+.bimbo4 {
+  top: $bimbo-top + 3*$bimbo-scatto;
+}
+
+.bimbo5 {
+  top: $bimbo-top + 4*$bimbo-scatto;
+}
+
+.combatimento {
+  position: relative;
+  margin-top: 18vw;
+  // z-index: 100;
+  width: 90%;
+  left: 5%;
+  margin-bottom: -10vw;
+  @if $transform {
+     @include mytransform(0, -3vw, 55px); // transform: translateZ(-90px) scale(scalez(-90)) translateY(25vw);
+  }
+}

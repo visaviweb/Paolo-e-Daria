@@ -1,0 +1,119 @@
+.viaggio-text {
+	background-color: #A87820;
+	color: $color-text-storia;
+}
+
+.viaggio-image {
+  	&:before {
+    	content: '';
+    	// background: #f9e376 ;
+		display: block;
+    	position:absolute;
+    	width: 100%;
+    	height: 100vw;
+    	background: #f9e376 url(../img/viaggio/sfondo-cielo.jpg) no-repeat top center scroll;
+    	background-size: 100% auto;
+    	z-index: -1;
+    	@if $transform {
+    		@include mytransform(0vw, -10vw, -90px);
+    	}
+  	}
+  	background: transparent url(../img/viaggio/mare.png) repeat-x center 76vw scroll; // #f9e376
+  	position: relative;
+  	width: 100%;
+  	padding-top: 3vw;
+  	border-bottom: 2vw solid #85ccd3;
+}
+
+.guerra {
+	position: relative;
+	width: 100%;
+	margin-bottom: 1.5vw;
+}
+
+.nave-sfondo {
+	position: relative;
+	width: 70%;
+	left: 15%;
+	// margin-top: 0vw;
+	background: url(../img/viaggio/sfondo-nave.png) no-repeat top center scroll;
+   	background-size: cover;
+}
+
+.nave {
+	position: relative;
+	width: 89%;
+	left: 6%;
+	padding-bottom: 8vw;
+	@if $transform {
+      	@include mytransform(0vw, 0vw, 20px);
+    }
+}
+.ft-visaggio {
+	.inner {
+		margin-top: -11vw;
+		margin-right: 5vw;
+		width: 65%;
+		@media(min-width: 600px) {
+			width: 60%;
+		}
+		@media(min-width: 800px) {
+			margin-right: 8vw;
+			width: 55%;
+		}
+		@media(min-width: 1000px) {
+			margin-right: 10vw;
+			width: 50%;
+		}
+		@media(min-width: 1200px) {
+			width: 45%;
+		}
+		p:first-child:first-letter {color: #00a7d1;}
+	}
+}
+
+.surfeuse {
+    position:absolute;
+    width: auto;
+    height: 24vw;
+    bottom: 0;
+    left: 2%;
+    @if $transform {
+      	@include mytransform(8vw, 0vw, 60px);
+    }
+}
+
+.algues {
+	width: 100%;
+}
+
+.algue1 {
+	top: 100vw;
+    @if $transform {
+      	@include mytransform(0vw, 10vw, 40px);
+    }
+}
+
+.algue2 {
+	bottom: 0;
+    @if $transform {
+      	@include mytransform(0vw, -10vw, 20px);
+    }
+}
+
+.gruppo-bandiere {
+	top: 42vw;
+	left: -1vw;
+	width: 28%;
+}
+
+.surf {
+	top: 48vw;
+	right: 0;
+	width: 28%;
+	@if $transform {
+      	@include mytransform(-15vw, 5vw, 120px);
+    }
+
+}
+

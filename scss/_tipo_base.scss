@@ -1,0 +1,190 @@
+// form sitomatic source scss...
+// number in pixel without unit for the main font-size
+$body_font_size: 16 !default;
+$body_line_height: 1.5 !default;
+$font_family: Helvetica, Arial, sans-serif !default;
+$font_color: false !default;
+
+@import 'rem_font_size';
+
+// global text vertical margin bottom
+$text_bottom_margin: 1em !default;
+$text_top_margin: 0 !default;
+
+// color for header H1, H2, ...
+$header_color: false !default;
+
+// font family for header H1, H2, ...
+$header_font_family: $font_family !default;
+$header_font_weight: normal !default;
+
+// use custom margin values
+$h1_margin: false !default;
+$h2_margin: false !default;
+$h3_margin: false !default;
+$h4_margin: false !default;
+$h5_margin: false !default;
+$h6_margin: false !default;
+
+// line-height
+$header_line_height: 1.15 !default;
+
+// or apply standard margin with
+// margin-top:0;
+// and standard bottom margin
+// set small bottom margin?:
+$use_small_margin_for_header: true !default;
+
+// set the header font size. in percents of the main font size without unit (ex. 200)
+// set to false to not set
+$h1_font_size: 200 !default;
+$h2_font_size: 145 !default;
+$h3_font_size: 130 !default;
+$h4_font_size: 115 !default;
+$h5_font_size: 100 !default;
+$h6_font_size: 100 !default;
+
+// use rem or percent for sizing header?
+$use_rem_for_heading: true !default;
+
+// table border color
+$table_border_color: #ccc !default;
+
+// table cell padding
+$table_cell_v_padding: 4px !default;
+$table_cell_h_padding: 6px !default;
+$table_cell_padding: $table_cell_v_padding $table_cell_h_padding !default;
+
+body {
+  font-family: $font_family;
+  font-size: $body_font_size + 0px;
+  line-height: $body_line_height;
+  @if ($font_color) {
+    color: $font_color;
+  }
+}
+
+address, ul, ol, dl, p, pre, blockquote, table {
+    margin-top:$text_top_margin;
+    margin-bottom:$text_bottom_margin;
+}
+
+h1,h2,h3,h4,h5 {
+  line-height: $header_line_height;
+  @if $header_color {
+	  color: $header_color;	
+  }
+  @if $header_font_family {
+  	font-family: $header_font_family;
+  }
+  @if $header_font_weight {
+      font-weight: $header_font_weight;
+  }
+}
+
+@if $h1_margin {
+  h1 {margin:$h1_margin;}
+} @elseif $use_small_margin_for_header {
+  h1 {margin-top:$text_top_margin;margin-bottom:$text_bottom_margin*1/1.5;}
+} @else {
+  h1 {margin-top:$text_top_margin;margin-bottom:$text_bottom_margin*3/4;}
+}
+
+@if $h2_margin {
+  h2 {margin:$h2_margin;}
+} @elseif $use_small_margin_for_header {
+  h2 {margin-top:$text_top_margin;margin-bottom:$text_bottom_margin*1/2.5;}
+} @else {
+  h2 {margin-top:$text_top_margin;margin-bottom:$text_bottom_margin*3/5;}
+}
+
+@if $h3_margin {
+  h3 {margin:$h3_margin;}
+} @elseif $use_small_margin_for_header {
+  h3 {margin-top:$text_top_margin;margin-bottom:$text_bottom_margin*1/2.5;}
+} @else {
+  h3 {margin-top:$text_top_margin;margin-bottom:$text_bottom_margin*3/5;}
+}
+
+@if $h4_margin {
+  h4 {margin:$h4_margin;}
+} @elseif $use_small_margin_for_header {
+  h4 {margin-top:$text_top_margin;margin-bottom:$text_bottom_margin*1/3.5;}
+} @else {
+  h4 {margin-top:$text_top_margin;margin-bottom:$text_bottom_margin*1/3;}
+}
+
+@if $h5_margin {
+  h5 {margin:$h5_margin;}
+} @elseif $use_small_margin_for_header {
+  h5 {margin-top:$text_top_margin;margin-bottom:$text_bottom_margin*1/3.5;}
+} @else {
+  h5 {margin-top:$text_top_margin;margin-bottom:$text_bottom_margin*1/3;}
+}
+
+@if $h6_margin {
+  h6 {margin:$h6_margin;}
+} @elseif $use_small_margin_for_header {
+  h6 {margin-top:$text_top_margin;margin-bottom:$text_bottom_margin*1/3.5;}
+} @else {
+  h6 {margin-top:$text_top_margin;margin-bottom:$text_bottom_margin*1/3;}
+}
+
+@if ($use_rem_for_heading) {
+  h1 {
+    @include font_size_from_percent($h1_font_size);
+  }
+  h2 {
+    @include font_size_from_percent($h2_font_size);
+  }
+  h3 {
+    @include font_size_from_percent($h3_font_size);
+  }
+  h4 {
+    @include font_size_from_percent($h4_font_size);
+  }
+  h5 {
+    @include font_size_from_percent($h5_font_size);
+  }
+  h6 {
+    @include font_size_from_percent($h6_font_size);
+  }
+} @else {
+  h1 {
+    font-size: $h1_font_size + 0%;
+  }
+  h2 {
+    font-size: $h2_font_size + 0%;
+  }
+  h3 {
+    font-size: $h3_font_size + 0%;
+  }
+  h4 {
+    font-size: $h4_font_size + 0%;
+  }
+  h5 {
+    font-size: $h5_font_size + 0%;
+  }
+  h6 {
+    font-size: $h6_font_size + 0%;
+  }
+
+}
+
+
+// dont add margin in table, list, blockquote, legende and footer
+table, li, blockquote {
+  	h1, h2, h3, h4, h5, h6, p, ul, ol, dl {
+    	margin-top:0;
+      margin-bottom:0;
+	}
+}
+
+th, td {
+  border: 1px solid $table_border_color;
+  padding: $table_cell_padding;
+}
+
+th, dt {
+  font-weight: bold; 
+}

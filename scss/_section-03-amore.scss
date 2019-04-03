@@ -1,0 +1,147 @@
+.amore-text {
+    background-color: #C43736;
+    color: $color-text-storia;
+}
+
+.amore-image {
+	background-color: #000;
+	padding-top: 1vw;
+}
+
+.filmato {
+	position:relative;
+	width: 100%;
+	height:15vw;
+	background: #000 url(../img/amore/R-e-G.jpg) repeat-x center center scroll;
+	background-size: auto 100%;
+	margin: 0 0 1vw 0;
+}
+
+.ft-amore {
+	width: 100%;
+	padding-top: 20vw;
+	background: #fff url(../img/amore/baccio.jpg) repeat-y top center scroll;
+	background-size: 100% auto;
+
+	.inner {
+		width: 65%;
+		@media(min-width: 600px) {
+			width: 60%;
+		}
+		@media(min-width: 800px) {
+			width: 55%;
+		}
+		@media(min-width: 1000px) {
+			width: 50%;
+		}
+		@media(min-width: 1200px) {
+			width: 45%;
+		}
+		p:first-child:first-letter {color: #cb007b;}
+	}
+
+}
+
+.coppia {
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	padding-top: 2vw;
+	padding-bottom: 2vw;
+	max-width: 100%;
+}
+
+.musica {
+	position:relative;
+	width: 100%;
+	padding: 1vw 0;
+	background-color: #000;
+}
+
+.decor1 {
+	top: 75vw;
+	left: -10%;
+	z-index: 101;
+	width:33%;
+	@if $transform {
+		@include mytransform(5vw, 20vw, 45px); // transform: translateZ(0.25px) scale(0.75) translateX(12vw) translateY(25vw);
+	}
+}
+
+.decor2 {
+	top: 14vw;
+	right: 0;
+	z-index: 101;
+	width:30%;
+	@if $transform {
+		@include mytransform(-5vw, 40vw, 45px); // transform: translateZ(0.25px) scale(0.75) translateX(12vw) translateY(25vw);
+	}
+}
+
+.scimmie {
+	z-index: 102;
+	width:20%;
+}
+
+.scimmia1 {
+	bottom: -5vw;
+	left: 40%;
+}
+
+.scimmia2 {
+	top: 20vw;
+	left: 5%;
+	width: 18%;
+}
+
+
+.scimmia3 {
+	top: 55vw;
+	right: 8%;
+	width: 18%;
+}
+
+.scimmia4 {
+	bottom: 25vw;
+	right: 2%;
+	width: 15%;
+}
+
+@if $transform {
+	.scimmia1, .scimmia2 {
+		@include mytransform(10vw, 10vw, 75px); // transform: translateZ(0.25px) scale(0.75) translateX(12vw) translateY(25vw);
+	}  		
+	.scimmia3, .scimmia4 {
+		@include mytransform(-8vw, -8vw, 75px); // transform: translateZ(0.25px) scale(0.75) translateX(12vw) translateY(25vw);
+	}  		
+}
+
+.rose {
+	z-index: 105;
+	width: 9%;
+
+}
+
+.rosa1 {
+	top: 20vw;
+	left: 50%;
+	
+}
+
+.rosa2 {
+	top: 50vw;
+	left: 14%;
+}
+
+.rosa3 {
+	bottom: 48vw;
+	right: 14%;
+}
+@if $transform {
+	.rosa1, .rosa2 {
+		@include mytransform(15vw, 60vw, 135px); // transform: translateZ(0.25px) scale(0.75) translateX(12vw) translateY(25vw);
+	}  		
+	.rosa3 {
+		@include mytransform(-10vw, 5vw, 135px); // transform: translateZ(0.25px) scale(0.75) translateX(12vw) translateY(25vw);
+	}  		
+}

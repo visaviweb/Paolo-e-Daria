@@ -1,0 +1,16 @@
+@if $debug {
+  
+
+
+.section {
+    transform: translate3d(600px, 0, -500px) rotateY(30deg);
+    transition: transform 0.5s;
+}
+.image, .frame-text {
+    box-shadow: 0 0 0 2px #000;
+    opacity: 0.9;
+}
+
+
+
+}
