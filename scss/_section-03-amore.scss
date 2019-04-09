@@ -25,16 +25,16 @@
 
 	.inner {
 		width: 65%;
-		@media(min-width: 600px) {
+		@media screen and (min-width: 600px) {
 			width: 60%;
 		}
-		@media(min-width: 800px) {
+		@media screen and (min-width: 800px) {
 			width: 55%;
 		}
-		@media(min-width: 1000px) {
+		@media screen and (min-width: 1000px) {
 			width: 50%;
 		}
-		@media(min-width: 1200px) {
+		@media screen and (min-width: 1200px) {
 			width: 45%;
 		}
 		p:first-child:first-letter {color: #cb007b;}

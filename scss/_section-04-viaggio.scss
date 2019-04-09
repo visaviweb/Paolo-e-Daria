@@ -54,18 +54,18 @@
 		margin-top: -11vw;
 		margin-right: 5vw;
 		width: 65%;
-		@media(min-width: 600px) {
+		@media screen and (min-width: 600px) {
 			width: 60%;
 		}
-		@media(min-width: 800px) {
+		@media screen and (min-width: 800px) {
 			margin-right: 8vw;
 			width: 55%;
 		}
-		@media(min-width: 1000px) {
+		@media screen and (min-width: 1000px) {
 			margin-right: 10vw;
 			width: 50%;
 		}
-		@media(min-width: 1200px) {
+		@media screen and (min-width: 1200px) {
 			width: 45%;
 		}
 		p:first-child:first-letter {color: #00a7d1;}
